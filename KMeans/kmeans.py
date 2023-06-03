@@ -52,6 +52,7 @@ class KMeans:
             for cluster, _ in enumerate(centroids):
                 # replacing the old centroids of cluster with mean of cluster data points
                 centroids[cluster] = X[assigned == cluster].mean(axis=0)
+        # coverged cluster centroids
         self.centroids = centroids
         return assigned
 
